@@ -46,8 +46,8 @@
                     return (
                         `
                             <div class="item">
-                                <div class="word">${word.호호}</div>
-                                <p class="description">${word.description}</p>
+                                <div class="word">${word.r_word}</div>
+                                <p class="description">${word.r_hanja}</p>
                             </div>
                         `
                     )
@@ -62,6 +62,8 @@
             console.log(query.value)
             getData(BASE_URL, query.value)
         })
+        
+        // 엔터키 반응
         query.addEventListener('keypress', function(event) {
             if(event.keyCode === 13) {
                 getData(BASE_URL, query.value)
